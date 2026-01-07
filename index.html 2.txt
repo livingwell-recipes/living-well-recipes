@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"> <title>Living Well, One Meal at a Time | Michelle Whaley McCarty</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f7f9f6;
+  color: #333;
+}
+header {
+  background: #6b8f71;
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+nav {
+  background: #e6efe9;
+  padding: 10px;
+  text-align: center;
+}
+nav button {
+  margin: 5px;
+  padding: 10px 14px;
+  border: none;
+  background: #6b8f71;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+section {
+  padding: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+.recipe-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.recipe-card h3 {
+  margin-top: 0;
+}
+.tags {
+  font-size: 0.9em;
+  color: #6b8f71;
+}
+.details {
+  display: none;
+  margin-top: 15px;
+}
+footer {
+  background: #6b8f71;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+input[type="search"] {
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+ <h1>Living Well, One Meal at a Time</h1>
+<p>By Michelle Whaley McCarty • Healthy Home Cooking for Real Life</p>
+</header>
+
+<nav>
+  <button onclick="filterCuisine('all')">All</button>
+  <button onclick="filterCuisine('Mexican')">Mexican</button>
+  <button onclick="filterCuisine('American')">American</button>
+  <button onclick="filterCuisine('Italian')">Italian</button>
+  <button onclick="filterCuisine('Mediterranean')">Mediterranean</button>
+  <button onclick="filterCuisine('Asian')">Asian & Oriental</button>
+  <button onclick="filterCuisine('Kid-Friendly')">Kid-Friendly</button>
+</nav>
+
+<section>
+  <h2>Welcome</h2>
+  <p>
+    Welcome to my kitchen! I’m Michelle — a home cook who believes that
+    healthy food should be comforting, flavorful, and realistic for everyday life.
+    My goal is to help families nourish their bodies in ways that feel doable,
+    supportive, and joyful.
+  </p>
+</section>
+
+<section>
+  <h2>Recipes</h2>
+  <input type="search" placeholder="Search recipes...">
+
+  <!-- RECIPE PLACEHOLDER -->
+  <div class="recipe-card" data-cuisine="Mexican">
+    <h3>Recipe Title Goes Here</h3>
+    <p class="tags">Healthy Mexican • Dinner • Family Friendly</p>
+    <button onclick="toggleDetails(this)">View Recipe</button>
+
+    <div class="details">
+      <p><strong>Why This Is Healthy:</strong> Add your health-focused explanation here.</p>
+
+      <p><strong>Ingredients:</strong></p>
+      <ul>
+        <li>Ingredient placeholder</li>
+        <li>Ingredient placeholder</li>
+      </ul>
+
+      <p><strong>Instructions:</strong></p>
+      <ol>
+        <li>Step one</li>
+        <li>Step two</li>
+      </ol>
+
+      <p><strong>Helpful Notes:</strong> Energy-saving tips, swaps, or kid-friendly ideas.</p>
+    </div>
+  </div>
+
+  <!-- COPY THIS CARD TO ADD MORE RECIPES -->
+
+</section>
+
+<section>
+  <h2>About Michelle</h2>
+  <p>
+    I’m a home cook who understands that life can come with challenges,
+    changing energy levels, and busy schedules. I believe food can be a
+    gentle and powerful way to support a healthier lifestyle — one meal at a time.
+  </p>
+  <p>
+    Everything I share here is about balance, nourishment, and making life
+    feel a little more possible.
+  </p>
+</section>
+
+<footer>
+  <p>© 2026 Michelle Whaley McCarty • Cook with care • Live with balance</p>
+</footer>
+
+<script>
+function toggleDetails(button) {
+  const details = button.nextElementSibling;
+  details.style.display = details.style.display === "block" ? "none" : "block";
+}
+
+function filterCuisine(type) {
+  const cards = document.querySelectorAll('.recipe-card');
+  cards.forEach(card => {
+    card.style.display =
+      type === 'all' || card.dataset.cuisine === type ? 'block' : 'none';
+  });
+}
+</script>
+
+</body>
+</html> 
+<h3>Recipe Title Goes Here</h3> 
+<h3>Healthy Chicken & Veggie Skillet</h3>
+<p class="tags">Healthy American • Dinner • Kid-Friendly</p> 
+<p><strong>Why This Is Healthy:</strong>
+This meal focuses on lean protein, colorful vegetables, and simple seasoning to support balanced energy and gentle nourishment.
+</p>
+
